@@ -1,0 +1,44 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject NavigationManager NavMan
+@inject visitaContext vc
+@using Microsoft.EntityFrameworkCore;
+
+
+<PageTitle>Registro de Visitas</PageTitle>
+
+<h3 class ="text-center">Registro de Visitas</h3>
+
+<div class="row">
+    @foreach(var visita in visitas)
+    {
+    <div class= "col-md-3">
+        <div class ="card">
+            <div class ="card-body">
+                <h5 class ="cad-tittle text-center mb-2">Usuario</h5>
+                <p class ="card-text"><strong>Nombre: </strong>@visita.Nombre</p>
+                <p class ="card-text"><strong>Apelldo: </strong>@visita.Apellido</p>
+                <p class ="card-text"><strong>Telefono: </strong>@visita.Teléfono</p>
+                <p class ="card-text"><strong>Correo Electronico: </strong>@visita.CorreoElectrónico</p>
+            </div>
+        </div>
+    </div>
+    }
+
+    <p> </p>
+    <button type ="submit" class="btn btn-primary" @onclick ="AgregarVisita">Agregar Visita</button>
+</div>
+
+@code{
+
+    //Emmanuel Perez Ramirez Mat: 2023-1003
+private List <Visita> visitas = new List<Visita>();
+
+private void AgregarVisita ()
+{
+ NavMan.NavigateTo("/formulario");
+}
+protected override async Task OnInitializedAsync(){
+    visitas = await vc.visitas.ToListAsync();
+}
+}

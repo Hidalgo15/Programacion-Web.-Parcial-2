@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Parcial_2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Parcial_2.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\wwwroot\\Imagenes\\Yo,Brazor.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Yo,Brazor.jpg"
+    },
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion web, trabajos\\Parcial_2\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Parcial_2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Parcial_2.props",
+      "PackagePath": "build\\Parcial_2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Parcial_2.props",
+      "PackagePath": "buildMultiTargeting\\Parcial_2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Parcial_2.props",
+      "PackagePath": "buildTransitive\\Parcial_2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

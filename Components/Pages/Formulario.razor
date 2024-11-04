@@ -1,0 +1,50 @@
+﻿@page "/formulario"
+@rendermode InteractiveServer
+@inject visitaContext vc
+@inject Servicio sv
+@inject NavigationManager NavMan
+
+<PageTitle>Formulario</PageTitle>
+
+<h3 class ="text-center">Formulario de Visitas</h3>
+
+<EditForm Model ="@nuevaVisita" OnValidSubmit="AgregarVisita">
+
+<div class ="form-group mb-3">
+    <label for = "Nombre"> Nombre:</label>
+    <InputText Id="Nombre" class = "form-control" @bind-Value = "nuevaVisita.Nombre" />
+    <ValidationMessage For ="@(()=> nuevaVisita.Nombre)"/>
+</div>
+
+<div class ="form-group mb-3">
+    <label for = "Apellido"> Apelldio:</label>
+    <InputText Id="Apellido" class = "form-control" @bind-Value = "nuevaVisita.Apellido" />
+    <ValidationMessage For ="@(()=> nuevaVisita.Apellido)"/>
+</div>
+
+<div class ="form-group mb-3">
+    <label for = "Telefono"> Telefono:</label>
+    <InputText Id="Telefono" class = "form-control" @bind-Value = "nuevaVisita.Teléfono" />
+    <ValidationMessage For ="@(()=> nuevaVisita.Teléfono)"/>
+</div>
+
+<div class ="form-group mb-3">
+    <label for = "CorreoElectrónico"> Correo:</label>
+    <InputText Id="CorreoElectrónico" class = "form-control" @bind-Value = "nuevaVisita.CorreoElectrónico" />
+    <ValidationMessage For ="@(()=> nuevaVisita.CorreoElectrónico)"/>
+</div>
+<button type ="submit" class ="btn btn-success">Guardar Visita </button>
+</EditForm>
+
+
+@code{
+    //Emmanuel Perez Ramirez Mat: 2023-1003
+    private Visita nuevaVisita = new Visita();
+
+    private async Task AgregarVisita()
+    {
+    await sv.AgregarVisitaAsync(nuevaVisita);
+    nuevaVisita = new Visita();
+    NavMan.NavigateTo($"/");
+    }
+}
